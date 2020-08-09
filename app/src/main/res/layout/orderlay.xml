@@ -3,6 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <androidx.cardview.widget.CardView
+        android:layout_marginTop="@dimen/_10sdp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
@@ -35,17 +36,30 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Kaushal Jethava"/>
-<TextView
-    android:layout_alignParentRight="true"
-    android:layout_alignRight="@+id/cmp_id"
-    android:id="@+id/cmp_price"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="$20"
-    android:layout_marginRight="@dimen/_20sdp"
-    android:textColor="#07790A"/>
 
-<Button
+            <TextView
+                android:id="@+id/cmp_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/cmp_id"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="37dp"
+                android:text="$20"
+                android:textColor="#07790A" />
+            <TextView
+                android:id="@+id/cmp_baki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/cmp_id"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="37dp"
+                android:layout_below="@id/cmp_price"
+                android:text="$20"
+                android:textColor="#FD1100" />
+
+
+            <Button
+                android:id="@+id/cmp_y"
     android:layout_alignParentRight="true"
     android:layout_alignRight="@+id/cmp_name"
     android:layout_alignBottom="@+id/cmp_name"

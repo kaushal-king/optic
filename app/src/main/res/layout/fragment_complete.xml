@@ -4,11 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".complete">
-
-   <androidx.recyclerview.widget.RecyclerView
-       android:id="@+id/complete_recycel"
+   <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
        android:layout_width="match_parent"
        android:layout_height="match_parent"
-       />
+       android:id="@+id/swiecmp"
+       >
 
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/recy_cmp"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          />
+   </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </FrameLayout>

@@ -6,6 +6,7 @@
     android:orientation="vertical">
 
    <androidx.cardview.widget.CardView
+       android:layout_marginTop="@dimen/_10sdp"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:layout_marginLeft="@dimen/_10sdp"
@@ -22,7 +23,7 @@
           />
       <LinearLayout
           android:layout_marginBottom="@dimen/_10sdp"
-          android:layout_marginTop="@dimen/_20sdp"
+          android:layout_marginTop="@dimen/_30sdp"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:orientation="horizontal"
@@ -40,15 +41,17 @@
              android:text="Orders"
              android:textStyle="bold"
              android:gravity="center"
-             android:textSize="@dimen/_20sdp"
+             android:textSize="@dimen/_15sdp"
              android:layout_marginTop="@dimen/_8sdp"/>
          <TextView
+             android:id="@+id/tm"
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
              android:text="200"
              android:gravity="center"
              android:layout_marginTop="@dimen/_8sdp"
-             android:textSize="@dimen/_20sdp"/>
+             android:textSize="@dimen/_15sdp"
+             />
       </LinearLayout>
 
          <LinearLayout
@@ -63,15 +66,17 @@
                 android:text="Revnue"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:textSize="@dimen/_20sdp"
+                android:textSize="@dimen/_15sdp"
                 android:layout_marginTop="@dimen/_8sdp"/>
             <TextView
+                android:id="@+id/tr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="20000"
                 android:gravity="center"
                 android:layout_marginTop="@dimen/_8sdp"
-                android:textSize="@dimen/_20sdp"/>
+                android:textSize="@dimen/_15sdp"
+                />
          </LinearLayout>
 </LinearLayout>
    </androidx.cardview.widget.CardView>
@@ -95,7 +100,7 @@
           />
       <LinearLayout
           android:layout_marginBottom="@dimen/_10sdp"
-          android:layout_marginTop="@dimen/_20sdp"
+          android:layout_marginTop="@dimen/_30sdp"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:orientation="horizontal"
@@ -107,21 +112,24 @@
              android:layout_height="wrap_content"
              android:orientation="vertical"
              >
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Orders"
-                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:gravity="center"
-                android:textSize="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_8sdp"/>
+                android:text="Orders"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
             <TextView
+                android:id="@+id/lm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="200"
                 android:gravity="center"
                 android:layout_marginTop="@dimen/_8sdp"
-                android:textSize="@dimen/_20sdp"/>
+                android:textSize="@dimen/_15sdp"
+                />
          </LinearLayout>
 
          <LinearLayout
@@ -136,15 +144,17 @@
                 android:text="Revnue"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:textSize="@dimen/_20sdp"
+                android:textSize="@dimen/_15sdp"
                 android:layout_marginTop="@dimen/_8sdp"/>
             <TextView
+                android:id="@+id/lr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="20000"
                 android:gravity="center"
                 android:layout_marginTop="@dimen/_8sdp"
-                android:textSize="@dimen/_20sdp"/>
+                android:textSize="@dimen/_15sdp"
+                />
          </LinearLayout>
       </LinearLayout>
    </androidx.cardview.widget.CardView>
@@ -169,7 +179,7 @@
           />
       <LinearLayout
           android:layout_marginBottom="@dimen/_10sdp"
-          android:layout_marginTop="@dimen/_20sdp"
+          android:layout_marginTop="@dimen/_30sdp"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:orientation="horizontal"
@@ -187,15 +197,17 @@
                 android:text="Orders"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:textSize="@dimen/_20sdp"
+                android:textSize="@dimen/_15sdp"
                 android:layout_marginTop="@dimen/_8sdp"/>
             <TextView
+                android:id="@+id/tmm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="200"
                 android:gravity="center"
                 android:layout_marginTop="@dimen/_8sdp"
-                android:textSize="@dimen/_20sdp"/>
+                android:textSize="@dimen/_15sdp"
+                />
          </LinearLayout>
 
          <LinearLayout
@@ -210,15 +222,17 @@
                 android:text="Revnue"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:textSize="@dimen/_20sdp"
+                android:textSize="@dimen/_15sdp"
                 android:layout_marginTop="@dimen/_8sdp"/>
             <TextView
+                android:id="@+id/trr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="20000"
                 android:gravity="center"
                 android:layout_marginTop="@dimen/_8sdp"
-                android:textSize="@dimen/_20sdp"/>
+                android:textSize="@dimen/_15sdp"
+                />
          </LinearLayout>
       </LinearLayout>
    </androidx.cardview.widget.CardView>

@@ -5,11 +5,16 @@
     android:layout_height="match_parent"
     tools:context=".pending">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/pending_recycel"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        android:id="@+id/swipend"
+        >
 
-
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recy_pend"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </FrameLayout>

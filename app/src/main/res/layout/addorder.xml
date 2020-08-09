@@ -1,34 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".addorder">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/ttt"
+        android:layout_marginTop="@dimen/_10sdp"
 
-<com.google.android.material.textfield.TextInputLayout
+        android:text="Add Bill"
+        android:textStyle="bold"
+        android:textSize="20dp"
         android:layout_width="match_parent"
-    android:id="@+id/name1"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/ttt"
+        android:id="@+id/name1"
+        android:layout_marginLeft="@dimen/_5sdp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/name"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Name"
-            android:layout_margin="@dimen/_5sdp"/>
+android:inputType="text"
+            android:layout_margin="@dimen/_5sdp"
+            android:maxLines="1"/>
     </com.google.android.material.textfield.TextInputLayout>
 
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:id="@+id/mobile1"
+        android:layout_marginLeft="@dimen/_5sdp"
         android:layout_below="@+id/name1"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/mobile"
+            android:maxLength="10"
             android:inputType="phone"
+            android:maxLines="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Mobile no"
@@ -55,11 +75,14 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:id="@+id/lhs1"
+        android:layout_marginLeft="@dimen/_5sdp"
         android:layout_weight="1"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/lhs"
+            android:maxLines="1"
+            android:inputType="numberDecimal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="LHS"
@@ -73,12 +96,15 @@
 android:layout_weight="1"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_height="wrap_content">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/rhs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
             android:hint="RHS"
-            android:layout_margin="@dimen/_5sdp"/>
+            android:maxLines="1"
+            android:inputType="numberDecimal" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -89,10 +115,13 @@ android:layout_weight="1"
         android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/uuu"
+            android:inputType="numberDecimal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
             android:hint="UUU"
-            android:layout_margin="@dimen/_5sdp"/>
+            android:maxLines="1"
+            />
     </com.google.android.material.textfield.TextInputLayout>
 </LinearLayout>
     <TextView
@@ -117,14 +146,18 @@ android:layout_weight="1"
             android:layout_width="match_parent"
             android:id="@+id/lhs11"
             android:layout_weight="1"
+            android:layout_marginLeft="@dimen/_5sdp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_height="wrap_content">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/llhs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
                 android:hint="LHS"
-                android:layout_margin="@dimen/_5sdp"/>
+                android:maxLines="1"
+                android:inputType="numberDecimal" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -136,9 +169,11 @@ android:layout_weight="1"
             android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/lrhs"
+                android:inputType="numberDecimal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="RHS"
+                android:maxLines="1"
                 android:layout_margin="@dimen/_5sdp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -150,9 +185,11 @@ android:layout_weight="1"
             android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/luuu"
+                android:inputType="numberDecimal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="UUU"
+                android:maxLines="1"
                 android:layout_margin="@dimen/_5sdp"/>
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
@@ -177,6 +214,7 @@ android:layout_weight="1"
             android:layout_width="match_parent"
             android:id="@+id/fprice"
             android:layout_weight="1"
+            android:layout_marginLeft="@dimen/_5sdp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_height="wrap_content">
             <com.google.android.material.textfield.TextInputEditText
@@ -184,6 +222,8 @@ android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Frame Price"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
                 android:layout_margin="@dimen/_5sdp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -194,12 +234,15 @@ android:layout_weight="1"
             android:layout_weight="1"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_height="wrap_content">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/glass_price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
                 android:hint="Glass Price"
-                android:layout_margin="@dimen/_5sdp"/>
+                android:maxLines="1"
+                android:inputType="numberDecimal" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -208,6 +251,7 @@ android:layout_weight="1"
         android:layout_width="match_parent"
         android:id="@+id/tot"
         android:layout_below="@id/i3"
+        android:layout_marginLeft="@dimen/_5sdp"
         android:layout_marginTop="@dimen/_5sdp"
         android:layout_weight="1"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -217,6 +261,8 @@ android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Total Price"
+            android:maxLines="1"
+            android:inputType="numberDecimal"
             android:layout_margin="@dimen/_5sdp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -227,14 +273,18 @@ android:layout_weight="1"
         android:layout_below="@id/tot"
         android:layout_marginTop="@dimen/_5sdp"
         android:layout_weight="1"
+        android:layout_marginLeft="@dimen/_5sdp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_height="wrap_content">
+
         <com.google.android.material.textfield.TextInputEditText
-           android:id="@+id/advance"
+            android:id="@+id/advance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:maxLines="1"
             android:hint="Advance Payment"
-            android:layout_margin="@dimen/_5sdp"/>
+            android:inputType="numberDecimal" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -243,14 +293,15 @@ android:layout_weight="1"
         android:id="@+id/save"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-   android:layout_alignParentBottom="true"
+   android:layout_below="@id/pyt"
         android:text="save"
+        android:onClick="addordert"
         android:layout_marginLeft="@dimen/_10sdp"
         android:layout_marginRight="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_10sdp"
         android:textColor="#FDFDFD"
         android:layout_marginTop="@dimen/_10sdp"
         android:background="@color/colorPrimary"/>
-
-
 </RelativeLayout>
+
+</ScrollView>
