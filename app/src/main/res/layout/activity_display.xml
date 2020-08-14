@@ -286,7 +286,19 @@
                 android:inputType="numberDecimal" />
         </com.google.android.material.textfield.TextInputLayout>
 
-
+        <Button
+            android:id="@+id/save2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pyt"
+            android:text="Complete MSG"
+            android:onClick="addordert"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:textColor="#FDFDFD"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/colorPrimary"/>
 
 
     </RelativeLayout>

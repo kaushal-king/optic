@@ -4,10 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class display extends AppCompatActivity {
     EditText dname,dmobile,dl,dr,du,dll,drr,duu,dfprice,dgprice,dtprice,dapay;
+    Button c;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +28,7 @@ public class display extends AppCompatActivity {
         dgprice=(EditText) findViewById(R.id.dglass_price);
         dtprice=(EditText) findViewById(R.id.dtotal);
         dapay=(EditText) findViewById(R.id.dadvance);
-
+c=(Button) findViewById(R.id.save2);
 
 
         dname.setFocusable(false);
@@ -66,6 +70,15 @@ public class display extends AppCompatActivity {
         dgprice.setText((i.getStringExtra("total")));
         dtprice.setText((i.getStringExtra("fprice")));
         dapay.setText((i.getStringExtra("advance")));
+
+
+
+        c.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "Send Sms", Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
     }

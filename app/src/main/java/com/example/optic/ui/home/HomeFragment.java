@@ -30,6 +30,7 @@ import retrofit2.Response;
 
 public class HomeFragment extends Fragment {
 TextView to,tr,lo,lr,tt,rr;
+String month="ii",year="ii";
     private HomeViewModel homeViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -40,7 +41,89 @@ TextView to,tr,lo,lr,tt,rr;
         String s =new SimpleDateFormat("MM-yyyy", Locale.US).format(new Date());
         String s1 =new SimpleDateFormat("MM", Locale.US).format(new Date());
         String s2 =new SimpleDateFormat("yyyy", Locale.US).format(new Date());
-        Toast.makeText(getContext(),"",Toast.LENGTH_LONG).show();
+        int m=Integer.parseInt(s1);
+        int y=Integer.parseInt(s2);
+
+
+
+        if(m==1)
+        {
+            m=12;
+            y=y-1;
+            month="12";
+            year=y+"";
+
+        }
+        if (m==2)
+        {
+            month="01";
+            year=s2;
+
+        }
+        if (m==3)
+        {
+            month="02";
+            year=s2;
+
+        }
+        if (m==4)
+        {
+            month="03";
+            year=s2;
+
+        }
+        if (m==5)
+        {
+            month="04";
+            year=s2;
+
+        }
+        if (m==6)
+        {
+            month="05";
+            year=s2;
+
+        }
+        if (m==7)
+        {
+            month="06";
+            year=s2;
+
+        }
+        if (m==8)
+        {
+            month="07";
+            year=s2;
+
+        }
+        if (m==9)
+        {
+            month="08";
+            year=s2;
+
+        }
+        if (m==10)
+        {
+            month="09";
+            year=s2;
+
+        }
+        if (m==11)
+        {
+            month="10";
+            year=s2;
+
+        }
+        if (m==12)
+        {
+            month="11";
+            year=s2;
+
+        }
+
+       // Toast.makeText(getContext(),"month:--"+month+"year;--"+year,Toast.LENGTH_LONG).show();
+
+
         to=(TextView) root.findViewById(R.id.tm);
         tr=(TextView) root.findViewById(R.id.tr);
         lo=(TextView) root.findViewById(R.id.lm);
@@ -91,6 +174,38 @@ TextView to,tr,lo,lr,tt,rr;
                 Toast.makeText(getContext(), t.getLocalizedMessage()+"", Toast.LENGTH_SHORT).show();
             }
         });
+
+
+        Api api3= ApiClient.getClient().create(Api.class);
+        Call<responce> call3= api3.mon("das",month,year);
+        call3.enqueue(new Callback<responce>() {
+            @Override
+            public void onResponse(Call<responce> call, Response<responce> response) {
+                if (response.body().getSuccess()==200) {
+
+                    lo.setText(response.body().getDe().getId());
+
+                    if(response.body().getDe().getSum()==null)
+                    {
+                        lr.setText("0");
+                    }
+                    else {
+                        lr.setText(response.body().getDe().getSum());
+                    }
+
+                }
+                else {
+                    Toast.makeText(getContext(), response.body().getMessage()+"", Toast.LENGTH_SHORT).show();
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<responce> call, Throwable t) {
+                Toast.makeText(getContext(), t.getLocalizedMessage()+"", Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
 
 

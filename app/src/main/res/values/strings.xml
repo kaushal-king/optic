@@ -9,7 +9,7 @@
 
     <string name="menu_home">Dashboard</string>
     <string name="menu_gallery">Billing</string>
-    <string name="menu_slideshow">Setting</string>
+    <string name="menu_slideshow">Send SMS</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
