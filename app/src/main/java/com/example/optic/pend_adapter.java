@@ -76,6 +76,8 @@ public class pend_adapter extends RecyclerView.Adapter<pend_adapter.ViewHolder> 
                     public void onResponse(Call<CommanResponse> call, Response<CommanResponse> response) {
                         if (response.body().getSuccess()==200) {
                             Toast.makeText(mcontex, response.body().getMessage()+"", Toast.LENGTH_SHORT).show();
+                            data.remove(viewHolder.getAdapterPosition());
+                            notifyDataSetChanged();
                         }
                         else {
                             Toast.makeText(mcontex, response.body().getMessage()+"", Toast.LENGTH_SHORT).show();

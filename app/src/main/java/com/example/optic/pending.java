@@ -12,6 +12,8 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
 import android.widget.Toast;
 
 import com.example.optic.apiinterface.Api;
@@ -88,7 +90,8 @@ public class pending extends Fragment {
                     Collections.reverse(li);
                     ada=new pend_adapter(getContext(),li);
                     recyclerView.setAdapter(ada);
-
+                    LayoutAnimationController layoutAnimationController= AnimationUtils.loadLayoutAnimation(getContext(),R.anim.layout_anmimation_fall_down);
+                    recyclerView.setLayoutAnimation(layoutAnimationController);
                 }
                 else {
                     Toast.makeText(getContext(), response.body().getMessage()+"", Toast.LENGTH_SHORT).show();

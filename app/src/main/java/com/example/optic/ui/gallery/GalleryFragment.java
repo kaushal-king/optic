@@ -62,7 +62,23 @@ public class GalleryFragment extends Fragment  implements TabLayout.OnTabSelecte
         viewPager.setAdapter(new GalleryFragment.adapter(manager));
         viewPager.setOffscreenPageLimit(2);
         tabLayout.addOnTabSelectedListener(this);
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                viewPager.getAdapter().notifyDataSetChanged();
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+       // viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         return root;
     }
 
@@ -108,6 +124,11 @@ public class GalleryFragment extends Fragment  implements TabLayout.OnTabSelecte
         @Override
         public int getCount() {
             return 2;
+        }
+
+        @Override
+        public int getItemPosition(@NonNull Object object) {
+            return POSITION_NONE;
         }
     }
 

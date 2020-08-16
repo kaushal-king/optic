@@ -2,6 +2,7 @@ package com.example.optic.apiinterface;
 
 
 
+import com.example.optic.apiinterface.responce.loginresponce;
 import com.example.optic.apiinterface.responce.pend_responce;
 import com.example.optic.apiinterface.responce.responce;
 
@@ -74,6 +75,17 @@ public interface Api {
     Call<responce> full(
             @Field("ful") String ful
 
+    );
+
+
+
+    @FormUrlEncoded
+    @POST("addbill.php")
+    Call<loginresponce> login(
+
+            @Field("login") String login,
+            @Field("mobno") String mobno,
+            @Field("password") String password
     );
 
 }

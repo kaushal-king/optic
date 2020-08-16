@@ -95,7 +95,8 @@ swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
                     Collections.reverse(li);
                     ada=new cmp_adapter(getContext(),li);
                     recyclerView.setAdapter(ada);
-
+                    LayoutAnimationController layoutAnimationController= AnimationUtils.loadLayoutAnimation(getContext(),R.anim.layout_anmimation_fall_down);
+                    recyclerView.setLayoutAnimation(layoutAnimationController);
                 }
                 else {
                     Toast.makeText(getContext(), response.body().getMessage()+"", Toast.LENGTH_SHORT).show();
